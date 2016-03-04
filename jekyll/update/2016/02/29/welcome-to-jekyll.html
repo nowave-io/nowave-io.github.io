@@ -110,55 +110,32 @@
 </script>
 
 
-    
-<script src="/assets/bower_components/angular/angular.min.js"></script>
-<script src="/assets/bower_components/angular-cookies/angular-cookies.min.js"></script>
-<script src="/assets/bower_components/angular-sanitize/angular-sanitize.min.js"></script>
-<script src="/assets/bower_components/angular-payments/lib/angular-payments.min.js"></script>
-<script src="/assets/js/app.js"></script>
-<script src="/assets/js/httpinterceptor.js"></script>
-<script src="/assets/js/authentificationService.js"></script>
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-<script src="/assets/js/account.js"></script>
-<div class="section slide2" ng-controller="AccountCtrl">
-    <header class='header_slide_h headerblack'>
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Welcome to Jekyll!</h1>
+    <p class="post-meta"><time datetime="2016-02-29T11:20:05+01:00" itemprop="datePublished">Feb 29, 2016</time></p>
+  </header>
 
-  <ul class='move-up'>
-    <li><img src="/assets/img/nowave.svg"></li>
-    <li><img src="/assets/img/picto_nowave.svg"></li>
-  </ul>
+  <div class="post-content" itemprop="articleBody">
+    <p>You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
 
-  
+<p>To add new posts, simply add a file in the <code class="highlighter-rouge">_posts</code> directory that follows the convention <code class="highlighter-rouge">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
 
-</header>
+<p>Jekyll also offers powerful support for code snippets:</p>
 
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
+<span class="k">end</span>
+<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
+<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
 
-    <form name="billing_form" stripe-form="handleStripe" role="form">
-        <fieldset ng-disabled="loading">
-
-            <input type="text" name="firstName" placeholder="Votre prénom" required="" ng-model="user.firstname">
-            <input type="text" name="lastName" placeholder="Votre nom" required="" ng-model="user.lastname">
-            <input type="email" name="email" placeholder="Votre email" required="" ng-model="user.email">
-            <input type="password" name="password" placeholder="Votre mot de passe" required="" ng-model="user.password">
-
-            <div class="cc-number-container">
-                <input type="tel" payments-validate="card" payments-format="card" id="ccnumber" name="ccnumber" ng-model="number" placeholder="Numéro de carte" class="number form-control" ng-class="{ 'error': error.card }"/>
-                <i class="fa fa-credit-card"></i>
-            </div>
-
-            <div class="cc-exp-cvc-container">
-                <input type="tel" payments-validate="expiry" payments-format="expiry" id="expiration_date" name="expiration_date" ng-model="expiry" placeholder="MM/AA" class="expiration-date form-control" ng-class="{ 'error': error.expiry }"/>
-                <input type="tel" payments-validate="cvc" payments-format="cvc" id="cvc" name="cvc" ng-model="cvc" placeholder="CRYPTOGRAMME" class="cvc form-control" ng-class="{ 'error': error.cvc }"/>
-            </div>
-        </fieldset>
-        <button ng-disabled="loading" ng-disabled="billing_form.$invalid" class="next-button" type="submit">S'abonner</button>
-
-        <div ng-show="error">%%error%</div>
-    </form>
+<p>Check out the <a href="http://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>
 
 
+  </div>
 
-</div>
+</article>
 
 
   </body>
