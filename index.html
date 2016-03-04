@@ -11,7 +11,7 @@
 
   <link href="//www.google-analytics.com" rel="dns-prefetch">
   <link href="//ajax.googleapis.com" rel="dns-prefetch">
-  <link href="/assets/css/style.min.css" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet">
 
   <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-touch-icon-60x60.png">
@@ -28,7 +28,7 @@
   <link rel="icon" type="image/png" href="/assets/icons/favicon-16x16.png" sizes="16x16">
   <link rel="manifest" href="/assets/icons/manifest.json">
   <link rel="shortcut icon" href="/assets/icons/favicon.ico">
-  <meta name="apple-mobile-web-app-title" content="MoiChef">
+  <meta name="apple-mobile-web-app-title" content="NoWave">
   <meta name="application-name" content="NoWave">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="msapplication-TileImage" content="/assets/icons/mstile-144x144.png">
@@ -40,7 +40,86 @@
 
   <body>
 
-    <div id="offer" class='animated' style="display:none;">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/bower_components/jquery/dist/jquery.min.js"><\/script>');</script>
+
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+
+<script src="/assets/bower_components/fullpage.js/dist/jquery.fullpage.min.js"></script>
+<script src="/assets/bower_components/jquery-modal/jquery.modal.min.js"></script>
+<script src="/assets/js/scripts.js"></script>
+
+<script>
+    (function (f, i, r, e, s, h, l) {
+        i['GoogleAnalyticsObject'] = s;
+        f[s] = f[s] || function () {
+                    (f[s].q = f[s].q || []).push(arguments)
+                }, f[s].l = 1 * new Date();
+        h = i.createElement(r),
+                l = i.getElementsByTagName(r)[0];
+        h.async = 1;
+        h.src = e;
+        l.parentNode.insertBefore(h, l)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'XXX');
+    ga('send', 'pageview');
+</script>
+
+<!-- start Mixpanel -->
+<script type="text/javascript">(function (f, b) {
+    if (!b.__SV) {
+        var a, e, i, g;
+        window.mixpanel = b;
+        b._i = [];
+        b.init = function (a, e, d) {
+            function f(b, h) {
+                var a = h.split(".");
+                2 == a.length && (b = b[a[0]], h = a[1]);
+                b[h] = function () {
+                    b.push([h].concat(Array.prototype.slice.call(arguments, 0)))
+                }
+            }
+
+            var c = b;
+            "undefined" !== typeof d ? c = b[d] = [] : d = "mixpanel";
+            c.people = c.people || [];
+            c.toString = function (b) {
+                var a = "mixpanel";
+                "mixpanel" !== d && (a += "." + d);
+                b || (a += " (stub)");
+                return a
+            };
+            c.people.toString = function () {
+                return c.toString(1) + ".people (stub)"
+            };
+            i = "disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+            for (g = 0; g < i.length; g++)f(c, i[g]);
+            b._i.push([a, e, d])
+        };
+        b.__SV = 1.2;
+        a = f.createElement("script");
+        a.type = "text/javascript";
+        a.async = !0;
+        a.src = "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL ? MIXPANEL_CUSTOM_LIB_URL : "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";
+        e = f.getElementsByTagName("script")[0];
+        e.parentNode.insertBefore(a, e)
+    }
+})(document, window.mixpanel || []);
+
+
+</script>
+
+
+    
+<script src="/assets/bower_components/angular/angular.min.js"></script>
+<script src="/assets/bower_components/angular-cookies/angular-cookies.min.js"></script>
+<script src="/assets/bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+<script src="/assets/bower_components/angular-payments/lib/angular-payments.min.js"></script>
+<script src="/assets/js/app.js"></script>
+<script src="/assets/js/httpinterceptor.js"></script>
+<script src="/assets/js/authentificationService.js"></script>
+
+<div id="offer" class='animated' style="display:none;">
     <img src="assets/img/picto_nowave.svg">
     <p>Nowave explore des thématiques contemporaines à travers le regard de réalisateurs du monde entier.<br><br>
             <span>Pour 12,99€ par mois, explorez tous les themas, et partagez un film par semaine avec la personne de votre choix pendant 24 heures.
@@ -97,12 +176,16 @@
     <li><img src="/assets/img/cettesemaine.svg"></li>
   </ul>
 
-  <ul class="menu-right">
+  <script src="/assets/js/login.js"></script>
+  <ul class="menu-right" ng-controller="LoginCtrl">
     <a href="/signup">
       <li class='item-header signuplink'>S'ABONNER</li>
     </a>
-    <a href="#offer" rel="modal:open">
+    <a href="/login" ng-show="!isLogged">
       <li class='item-header loginlink'>SE CONNECTER</li>
+    </a>
+    <a href="/" ng-show="isLogged" ng-click="logout(credentials)">
+      <li class='item-header loginlink'>DECONNECTION</li>
     </a>
   </ul>
   
@@ -189,7 +272,6 @@
         <div class="right-part">
             <ul>
                 
-                    amour
                     
                     <li>
                         <div class="prev-film-info">
@@ -204,7 +286,6 @@
                     </li>
                     
                 
-                    amour
                     
                     <li>
                         <div class="prev-film-info">
@@ -219,7 +300,6 @@
                     </li>
                     
                 
-                    amour
                     
                     <li>
                         <div class="prev-film-info">
@@ -234,7 +314,6 @@
                     </li>
                     
                 
-                    amour
                     
                     <li>
                         <div class="prev-film-info">
@@ -256,7 +335,9 @@
 <!-- HORIZONTAL SLIDES -->
 
 
-    <div class="slide slide_h sh1 movie">
+    <script src="/assets/js/movie.js"></script>
+<div class="slide slide_h sh1 movie" ng-controller="MovieCtrl" ng-init="init('Her')">
+
     <header class='header_slide_h headergrey'>
         <ul>
 
@@ -314,17 +395,19 @@
 
     <div class="right-part">
         <div class="movie-container">
-            <div class="play-trailer"></div>
-            <video class="trailer trailer1" preload="auto" poster="assets/img/transparent.png">
-                <source src="assets/video/movies/1.mp4" type="video/mp4">
-            </video>
+            <div ng-bind-html="movie" ng-show="isMovie"></div>
+            <div ng-bind-html="trailer" ng-show="!isMovie"></div>
         </div>
+        <button ng-show="!isMovie" ng-click="switchMovieTrailer()">Film</button>
+        <button ng-show="isMovie" ng-click="switchMovieTrailer()">Bande Annonce</button>
     </div>
 </div>
 
 
 
-    <div class="slide slide_h sh1 movie">
+    <script src="/assets/js/movie.js"></script>
+<div class="slide slide_h sh1 movie" ng-controller="MovieCtrl" ng-init="init('De Smet')">
+
     <header class='header_slide_h headergrey'>
         <ul>
 
@@ -382,17 +465,19 @@
 
     <div class="right-part">
         <div class="movie-container">
-            <div class="play-trailer"></div>
-            <video class="trailer trailer2" preload="auto" poster="assets/img/transparent.png">
-                <source src="assets/video/movies/2.mp4" type="video/mp4">
-            </video>
+            <div ng-bind-html="movie" ng-show="isMovie"></div>
+            <div ng-bind-html="trailer" ng-show="!isMovie"></div>
         </div>
+        <button ng-show="!isMovie" ng-click="switchMovieTrailer()">Film</button>
+        <button ng-show="isMovie" ng-click="switchMovieTrailer()">Bande Annonce</button>
     </div>
 </div>
 
 
 
-    <div class="slide slide_h sh1 movie">
+    <script src="/assets/js/movie.js"></script>
+<div class="slide slide_h sh1 movie" ng-controller="MovieCtrl" ng-init="init('Fi Zill Ragel')">
+
     <header class='header_slide_h headergrey'>
         <ul>
 
@@ -446,17 +531,19 @@
 
     <div class="right-part">
         <div class="movie-container">
-            <div class="play-trailer"></div>
-            <video class="trailer trailer3" preload="auto" poster="assets/img/transparent.png">
-                <source src="assets/video/movies/3.mp4" type="video/mp4">
-            </video>
+            <div ng-bind-html="movie" ng-show="isMovie"></div>
+            <div ng-bind-html="trailer" ng-show="!isMovie"></div>
         </div>
+        <button ng-show="!isMovie" ng-click="switchMovieTrailer()">Film</button>
+        <button ng-show="isMovie" ng-click="switchMovieTrailer()">Bande Annonce</button>
     </div>
 </div>
 
 
 
-    <div class="slide slide_h sh1 movie">
+    <script src="/assets/js/movie.js"></script>
+<div class="slide slide_h sh1 movie" ng-controller="MovieCtrl" ng-init="init('Deep Space')">
+
     <header class='header_slide_h headergrey'>
         <ul>
 
@@ -506,11 +593,11 @@
 
     <div class="right-part">
         <div class="movie-container">
-            <div class="play-trailer"></div>
-            <video class="trailer trailer4" preload="auto" poster="assets/img/transparent.png">
-                <source src="assets/video/movies/4.mp4" type="video/mp4">
-            </video>
+            <div ng-bind-html="movie" ng-show="isMovie"></div>
+            <div ng-bind-html="trailer" ng-show="!isMovie"></div>
         </div>
+        <button ng-show="!isMovie" ng-click="switchMovieTrailer()">Film</button>
+        <button ng-show="isMovie" ng-click="switchMovieTrailer()">Bande Annonce</button>
     </div>
 </div>
 
@@ -519,77 +606,10 @@
         
     </div>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="assets/components/jquery.js"><\/script>');</script>
+    
 
-
-    <script src="assets/js/jquery.fullPage.js"></script>
-    <script src="assets/js/modal.min.js"></script>
-    <script src="assets/js/scripts.min.js"></script>
-
-
-    <script>
-        (function (f, i, r, e, s, h, l) {
-            i['GoogleAnalyticsObject'] = s;
-            f[s] = f[s] || function () {
-                        (f[s].q = f[s].q || []).push(arguments)
-                    }, f[s].l = 1 * new Date();
-            h = i.createElement(r),
-                    l = i.getElementsByTagName(r)[0];
-            h.async = 1;
-            h.src = e;
-            l.parentNode.insertBefore(h, l)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-        ga('create', 'UA-62860675-1');
-        ga('send', 'pageview');
-    </script>
-
-    <!-- start Mixpanel -->
-    <script type="text/javascript">(function (f, b) {
-        if (!b.__SV) {
-            var a, e, i, g;
-            window.mixpanel = b;
-            b._i = [];
-            b.init = function (a, e, d) {
-                function f(b, h) {
-                    var a = h.split(".");
-                    2 == a.length && (b = b[a[0]], h = a[1]);
-                    b[h] = function () {
-                        b.push([h].concat(Array.prototype.slice.call(arguments, 0)))
-                    }
-                }
-
-                var c = b;
-                "undefined" !== typeof d ? c = b[d] = [] : d = "mixpanel";
-                c.people = c.people || [];
-                c.toString = function (b) {
-                    var a = "mixpanel";
-                    "mixpanel" !== d && (a += "." + d);
-                    b || (a += " (stub)");
-                    return a
-                };
-                c.people.toString = function () {
-                    return c.toString(1) + ".people (stub)"
-                };
-                i = "disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
-                for (g = 0; g < i.length; g++)f(c, i[g]);
-                b._i.push([a, e, d])
-            };
-            b.__SV = 1.2;
-            a = f.createElement("script");
-            a.type = "text/javascript";
-            a.async = !0;
-            a.src = "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL ? MIXPANEL_CUSTOM_LIB_URL : "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";
-            e = f.getElementsByTagName("script")[0];
-            e.parentNode.insertBefore(a, e)
-        }
-    })(document, window.mixpanel || []);
-    mixpanel.init(config.mixpanel.key);
-
-    mixpanel.track('Index page');
-
-    </script>
 
   </body>
+
 
 </html>

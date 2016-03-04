@@ -119,8 +119,10 @@
 <script src="/assets/js/httpinterceptor.js"></script>
 <script src="/assets/js/authentificationService.js"></script>
 
-<script src="/assets/js/account.js"></script>
-<div class="section slide2" ng-controller="AccountCtrl">
+<script src="/assets/js/login.js"></script>
+
+
+<div class="section slide2" ng-controller="LoginCtrl">
     <header class='header_slide_h headerblack'>
 
   <ul class='move-up'>
@@ -133,31 +135,14 @@
 </header>
 
 
-    <form name="billing_form" stripe-form="handleStripe" role="form">
-        <fieldset ng-disabled="loading">
 
-            <input type="text" name="firstName" placeholder="Votre prénom" required="" ng-model="user.firstname">
-            <input type="text" name="lastName" placeholder="Votre nom" required="" ng-model="user.lastname">
-            <input type="email" name="email" placeholder="Votre email" required="" ng-model="user.email">
-            <input type="password" name="password" placeholder="Votre mot de passe" required="" ng-model="user.password">
+    <form id="signup" ng-show="!isLogged">
+        <input type="email" name="email" placeholder="Votre email" required="" ng-model="credentials.email">
+        <input type="password" name="password" placeholder="Votre mot de passe" required="" ng-model="credentials.password">
 
-            <div class="cc-number-container">
-                <input type="tel" payments-validate="card" payments-format="card" id="ccnumber" name="ccnumber" ng-model="number" placeholder="Numéro de carte" class="number form-control" ng-class="{ 'error': error.card }"/>
-                <i class="fa fa-credit-card"></i>
-            </div>
-
-            <div class="cc-exp-cvc-container">
-                <input type="tel" payments-validate="expiry" payments-format="expiry" id="expiration_date" name="expiration_date" ng-model="expiry" placeholder="MM/AA" class="expiration-date form-control" ng-class="{ 'error': error.expiry }"/>
-                <input type="tel" payments-validate="cvc" payments-format="cvc" id="cvc" name="cvc" ng-model="cvc" placeholder="CRYPTOGRAMME" class="cvc form-control" ng-class="{ 'error': error.cvc }"/>
-            </div>
-        </fieldset>
-        <button ng-disabled="loading" ng-disabled="billing_form.$invalid" class="next-button" type="submit">S'abonner</button>
-
-        <div ng-show="error">%%error%</div>
+        <button ng-click="login(credentials)">Login</button>
+        <div ng-show="errors">%%message%%</div>
     </form>
-
-
-
 </div>
 
 
