@@ -7,7 +7,7 @@ nowave.factory('AuthentificationService', function ($cookies) {
      };
 
      AuthentificationService.logout = function() {
-         $cookies.remove('jwt');
+         $cookies.remove('jwt', cookieOptions);
      };
 
      return AuthentificationService;

@@ -1,1 +1,2 @@
-var api = 'https://api.nowave.io/api';
+var api = 'http://localhost:8080/api';
+var cookieOptions = {};
