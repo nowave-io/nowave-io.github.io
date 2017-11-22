@@ -38,6 +38,10 @@ header.sub-header .issue {
     font-weight: 700
 }
 
+option {
+    background-color: black;
+}
+
 .ligatures {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -1355,7 +1359,7 @@ body.home .issue {
     line-height: 40px;
     border-radius: 50%;
     background-color: #c6aa69;
-    font-family: Montserrat;
+    font-family: Montserrat, sans-serif;
 }
 
 body.home .arrow-down {
