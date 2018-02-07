@@ -738,7 +738,8 @@ header.sub-header .issue span {
     display: inline-block;
     font-size: 1.1428571429rem;
     line-height: 1.4285714286rem;
-    font-family: Infini, sans-serif;
+    font-family: sans-serif;
+    font-weight: 550;
     color: #000
 }
 
