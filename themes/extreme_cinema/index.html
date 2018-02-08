@@ -7,7 +7,7 @@
     <meta name=viewport content="width=device-width,initial-scale=1,minimum-scale=1">
     <meta name=keywords itemprop=keywords content="cinema, movies, curation, indie, vod, svod, vision, motion, watch, stream">
     <meta name=description itemprop=description content="NoWave explore des thèmes contemporains à travers le regard de réalisateurs du monde entier.">
-    <link rel=canonical itemprop=url href=/movies/8_balles/>
+    <link rel=canonical itemprop=url href=/themes/zombos/>
     <link rel=alternate type=application/rss+xml title=RSS href=/feed.xml>
     <title>NOWAVE, Visions in motion</title>
     <link href=//www.google-analytics.com rel=dns-prefetch>
@@ -43,8 +43,8 @@
 		<![endif]-->
 </head>
 
-<body class=movie>
-    <div ng-controller=movieCtrl ng-init="init('bebe_vampire')">
+<body class=theme>
+    <div ng-controller=themeCtrl>
         <header class="main-header navbar" ng-controller=LoginCtrl>
             <figure><a href=/><img src=/img/logo_nowave.svg alt="NoWave logo"></a>
             </figure>
@@ -59,68 +59,124 @@
             </ul>
         </header>
         <header class=sub-header scroll-position=scroll ng-class="{fadeOut: scroll &gt; 20}">
-            <figure></figure>
+            <figure><img src=/img/visions_in_motion_w.svg alt="NoWave, Visions in motion"></figure>
+            <p>-</p>
             <div class=issue><span>20</span></div>
-            <div class=theme-name><a href=/themes/Extreme_cinema>Extreme Cinéma</a></div>
+            <div class=theme-name>
+                <a href=""></a>
+            </div>
         </header>
-        <main>
-            <aside>
-                <p class=movie-title>Bébé Vampire <span class="small_title">Grave of the Vampire (titre original)</span></p>
-                <p><span>de <em>John Hayes</em>- Version Originale 1972, 1 h 35 min, USA (Sortie DVD récente par Artus Film)</span></p>
-            </aside>
-            <section class=player>
-                <div class=iframe-container>
-                    <div class=type-selection ng-show=showTypeSelection>
-                        <div class="item-play-trailer trailer" ng-click="play('trailer')">BANDE-ANNONCE</div>
-                        <div class="item-play-movie fullMovie" ng-click="play('fullMovie')">VOIR LE FILM</div>
-                    </div><iframe id=videoPlayer class=video-player ng-src=%%videoUrl%% frameborder=0 webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
-                <div class=movie-info>
-                    <figure>
-                        <a href="http://www.imdb.com/title/tt0068658/?ref_=fn_al_tt_1" target=_blank><img src=/img/imdb_v2.svg></a>
-                    </figure>
-                </div>
-                <p class=intro>Venu flirter une nuit dans un cimetière, un jeune couple est soudainement attaqué par un vampire qui a surgi de sa tombe. Alors que le jeune homme succombe sous ses morsures, la jeune fille, elle, survit après que le monstre l'ait violée.
-                    Cette dernière accouche finalement d'un bébé au goût prononcé pour le sang.</p>
+        <style>
+            section.top:after {
+                background-image: url(/img/themes/extreme_cinema/bg_top.png)
+            }
+            
+            section.bottom:after {
+                background-image: url(/)
+            }
+            
+            .signature:before {
+                background-image: url(/img/themes/extreme_cinema/poes.png)
+            }
+            
+            section.bottom:after {
+                position: fixed!important
+            }
+        </style>
+        <main><video muted loop autoplay class=video-bg><source src=/ type=video/mp4></video>
+            <section class=top>
+                <aside class=left>
+                    <p class=theme-title>Zombos</p>
+                    <p class=signature>Vision by <span>Poes<br></span></p>
+                    <a du-smooth-scroll=bottom offset=20 duration=500 class=bottom-arrow></a>
+                    <div class=separator></div>
+                </aside>
+                <aside class=right>
+                    <p class=article-intro style=color:#fff>Pour cette sélection nous avons fait appel au graffeur parisien POES, qui était de passage récemment pour Rose Béton. Il nous a parlé de ses inspirations, et à cette occasion nous avons choisi de vous présenter une petite rétrospective
+                        sur les films de zombies, et un manga étonnant et méconnu du co­fondateur du Studio Ghibli, Isao Takahata</p>
+                </aside>
             </section>
-            <aside class=extras>
-
-            </aside>
-        </main>
-        <div class=mask><img src=/img/movies/bebe_vampire/bebe_vampire_editorial.jpg></div>
-        <footer class=footer>
-            <div class=container><img src=/img/logo_nowave.svg alt="NoWave logo">
-                <div class=list-logo>
-                    <figure>
-                        <figcaption>NoWave est soutenu par le British Concil</figcaption>
-                        <a href=https://www.britishcouncil.fr target=_blank><img src=/img/british_council_logo_w.svg alt="British Council"></a>
-                    </figure>
-                    <figure>
-                        <figcaption>NoWave aime :</figcaption>
-                        <a href=http://www.revue-positif.net target=_blank><img src=/img/positif_logo.png alt=Positif></a>
-                    </figure>
-                    <figure>
-                        <figcaption>NoWave aime : Vidéo en poche</figcaption>
-                        <a href=http://www.videoenpoche.info/ target=_blank><img src=/img/video_en_poche_logo_w.svg alt="Video en poche"></a>
-                    </figure>
-                    <figure>
-                        <figcaption>NoWave est soutenu par le Centre National de la Cinématographie</figcaption>
-                        <a href=http://www.cnc.fr target=_blank><img src=/img/CNC_logo_w.svg alt=CNC></a>
-                    </figure>
+            <section id=bottom class=bottom>
+                <div class=transition>
+                    <div class=blur style=background-image:url(/)></div>
                 </div>
-            </div>
-            <div class=links>
-                <ul>
-                    <li><a href=/documents/faq.html>FAQ</a></li>
-                    <li><a href=/documents/cgu.html>CGU</a></li>
-                    <li><a href=/documents/mentions.html>Mentions légales</a></li>
-                    <li><a href=/documents/credits.html>Crédits</a></li>
-                    <li><a href=#>Déclaration CNIL n°1954478</a></li>
-                    <li><a href=mailto:hello@nowave.io>Contact</a></li>
-                    <li><a href=https://twitter.com/nowavemovies target=_blank><i class="fa fa-twitter-square fa-2x"></i></a></li>
-                    <li><a href=https://www.facebook.com/Nowave-Cinema-791674174244094 target=_blank><i class="fa fa-facebook-square fa-2x"></i></a></li>
-                </ul>
-            </div>
-        </footer>
+                <div class=line></div>
+                <figure class=logo><img src=/img/picto_nowave.svg></figure>
+                <aside class=movies-selection>
+                    <a href=/movies/dead_snow>
+                        <div href=/movies/dead_snow class=movie>
+                            <div class=movie-desc-container>
+                                <p>Dead Snow<br><span>de Tomi Wirkola<br>Fiction, Horreur<br>2010, 91mn</span></p>
+                            </div>
+                            <figure><img src=/img/movies/dead_snow/poster_small.png></figure>
+                            <a href=/movies/dead_snow class=play></a>
+                        </div>
+                    </a>
+                    <a href=/movies/kie_la_petite_peste>
+                        <div href=/movies/kie_la_petite_peste class=movie>
+                            <div class=movie-desc-container>
+                                <p>Kié la petite peste<br><span>de Isaho Takahata<br>fiction, horreur<br>1981, 90mn</span></p>
+                            </div>
+                            <figure><img src=/img/movies/kie_la_petite_peste/poster_small.png></figure>
+                            <a href=/movies/kie_la_petite_peste class=play></a>
+                        </div>
+                    </a>
+                    <a href=/movies/the_night_of_the_living_dead>
+                        <div href=/movies/the_night_of_the_living_dead class=movie>
+                            <div class=movie-desc-container>
+                                <p>Night of the living dead<br><span>de Romero<br>fiction, horreur<br>1968, 96mn</span></p>
+                            </div>
+                            <figure><img src=/img/movies/the_night_of_living_dead/poster_small.png></figure>
+                            <a href=/movies/the_night_of_the_living_dead class=play></a>
+                        </div>
+                    </a>
+                    <a href=/movies/messiah_of_evil>
+                        <div href=/movies/messiah_of_evil class=movie>
+                            <div class=movie-desc-container>
+                                <p>Messiah of evil<br><span>de Huyck Willard<br>1973, 89mn</span></p>
+                            </div>
+                            <figure><img src=/img/movies/messiah_of_evil/poster_small.png></figure>
+                            <a href=/movies/messiah_of_evil class=play></a>
+                        </div>
+                    </a>
+                </aside>
+                <aside class=columns></aside>
+                <footer class=footer>
+                    <div class=container><img src=/img/logo_nowave.svg alt="NoWave logo">
+                        <div class=list-logo>
+                            <figure>
+                                <figcaption>NoWave est soutenu par le British Concil</figcaption>
+                                <a href=https://www.britishcouncil.fr target=_blank><img src=/img/british_council_logo_w.svg alt="British Council"></a>
+                            </figure>
+                            <figure>
+                                <figcaption>NoWave aime :</figcaption>
+                                <a href=http://www.revue-positif.net target=_blank><img src=/img/positif_logo.png alt=Positif></a>
+                            </figure>
+                            <figure>
+                                <figcaption>NoWave aime : Vidéo en poche</figcaption>
+                                <a href=http://www.videoenpoche.info/ target=_blank><img src=/img/video_en_poche_logo_w.svg alt="Video en poche"></a>
+                            </figure>
+                            <figure>
+                                <figcaption>NoWave est soutenu par le Centre National de la Cinématographie</figcaption>
+                                <a href=http://www.cnc.fr target=_blank><img src=/img/CNC_logo_w.svg alt=CNC></a>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class=links>
+                        <ul>
+                            <li><a href=/documents/faq.html>FAQ</a></li>
+                            <li><a href=/documents/cgu.html>CGU</a></li>
+                            <li><a href=/documents/mentions.html>Mentions légales</a></li>
+                            <li><a href=/documents/credits.html>Crédits</a></li>
+                            <li><a href=#>Déclaration CNIL n°1954478</a></li>
+                            <li><a href=mailto:hello@nowave.io>Contact</a></li>
+                            <li><a href=https://twitter.com/nowavemovies target=_blank><i class="fa fa-twitter-square fa-2x"></i></a></li>
+                            <li><a href=https://www.facebook.com/Nowave-Cinema-791674174244094 target=_blank><i class="fa fa-facebook-square fa-2x"></i></a></li>
+                        </ul>
+                    </div>
+                </footer>
+            </section>
+        </main>
     </div>
     <script type=text/javascript src=https://js.stripe.com/v2/></script>
     <script>
