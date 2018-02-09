@@ -2180,3 +2180,7 @@ body.movie .mask:after {
         top: 5%
     }
 }
+
+.color-black {
+    color: #000;
+}
