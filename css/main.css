@@ -1782,7 +1782,13 @@ body.theme main section.bottom aside.movies-selection div.movie {
     position: relative;
     background: #000;
     -ms-flex-pack: justify;
-    justify-content: space-between
+    justify-content: space-between;
+    position: relative;
+}
+
+body.theme main section.bottom aside.movies-selection div.movie a {
+    position: absolute;
+    bottom: 0;
 }
 
 body.theme main section.bottom aside.movies-selection div.movie .movie-desc-container {
