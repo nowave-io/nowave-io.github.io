@@ -1492,7 +1492,7 @@ body.theme main section.top aside.left p.theme-title {
     align-self: flex-start
 }
 
-p.theme-title p.theme-subtitle {
+p.theme-title span.theme-subtitle {
     padding-left: 5%;
     text-transform: uppercase;
     width: 84%;
