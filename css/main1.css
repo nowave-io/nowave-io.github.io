@@ -1783,6 +1783,12 @@ body.theme main section.bottom aside.movies-selection div.movie {
     background: #000;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    position: relative;
+}
+
+body.theme main section.bottom aside.movies-selection div.movie a {
+    position: absolute;
+    bottom: 0;
 }
 
 body.theme main section.bottom aside.movies-selection div.movie .movie-desc-container {
@@ -1812,14 +1818,12 @@ body.theme main section.bottom aside.movies-selection div.movie figure {
     height: 15.7142857143rem;
     margin: 0;
     padding: 0;
-    width: 100%;
-    position: relative;
+    width: 100%
 }
 
 body.theme main section.bottom aside.movies-selection div.movie figure img {
     width: 100%;
-    height: 100%;
-    position: absolute;
+    height: 100%
 }
 
 body.theme main section.bottom aside.movies-selection div.movie .play {
