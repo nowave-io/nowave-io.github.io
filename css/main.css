@@ -1492,6 +1492,23 @@ body.theme main section.top aside.left p.theme-title {
     align-self: flex-start
 }
 
+body.theme main section.top aside.left p.theme-subtitle {
+    padding-left: 5%;
+    text-transform: uppercase;
+    width: 84%;
+    word-wrap: break-word;
+    margin: 8.0714285714rem 0 0;
+    color: #fff;
+    font-family: Infini, sans-serif;
+    font-size: 3rem;
+    line-height: 3rem;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    -ms-flex-item-align: start;
+    align-self: flex-start
+}
+
 @media screen and (max-width:680px) {
     body.theme main section.top aside.left p.theme-title {
         font-size: 3.2142857143rem;
