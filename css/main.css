@@ -1813,13 +1813,11 @@ body.theme main section.bottom aside.movies-selection div.movie figure {
     margin: 0;
     padding: 0;
     width: 100%;
-    position: relative;
 }
 
 body.theme main section.bottom aside.movies-selection div.movie figure img {
     width: 100%;
     height: 100%;
-    position: absolute;
 }
 
 body.theme main section.bottom aside.movies-selection div.movie .play {
