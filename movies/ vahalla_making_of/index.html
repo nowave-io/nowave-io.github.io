@@ -53,10 +53,9 @@
                     <form action=%%action%%><input type=submit class=signup value=STATISTIQUES></form>
                 </li>
                 <li class=theme-select-item><select class=theme-select ng-model=selected_theme ng-change=go_to_theme()><option value="" disabled>NUMÉROS</option><option value=revolution>Révolution</option><option value=climat>Climat</option><option value=cat_iii>CAT-III</option><option value=love_hurts>Love Hurts</option><option value=freaks>Freaks</option><option value=shakespeare_lives>Shakespeare Lives</option><option value=pinku>Pinku Eiga</option><option value=zombos>Zombos</option><option value=festival_europeen_lille>FC EUROPÉEN DE LILLE</option><option value=festival_cine_latino>CineLatino</option><option value=mamoru>Mamoru Oshii</option><option value=valhalla>Valhalla</option><option value=bela_lugosi>Bela Lugosi</option><option value=misfits>Misfits</option><option value=mauvais_genre>Mauvais genre</option><option value=annecy>Festival du film d'animation d'Annecy</option><option value=nanar_1>Nanar 1</option><option value=12_sports>sports</option></select></li>
-                <li
-                    ng-show=!isLogged><a data=signup ng-click=open($event)>commencer votre mois gratuit</a></li>
-                    <li ng-show=!isLogged><a data=login ng-click=open($event)>se connecter</a></li>
-                    <li ng-show=isLogged><a ng-click=logout()>se déconnecter</a></li>
+                <li ng-show=!isLogged><a data=signup ng-click=open($event)>commencer votre mois gratuit</a></li>
+                <li ng-show=!isLogged><a data=login ng-click=open($event)>se connecter</a></li>
+                <li ng-show=isLogged><a ng-click=logout()>se déconnecter</a></li>
             </ul>
         </header>
         <header class=sub-header scroll-position=scroll ng-class="{fadeOut: scroll &gt; 20}">
