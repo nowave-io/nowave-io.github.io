@@ -57,7 +57,7 @@
             <div class=logo-smartphone><img src=img/head_logo.svg alt=""></div>
             <div class=content>
                 <p><strong>UNE SELECTION DE FILMS QUE VOUS NE VERREZ PAS AILLEURS</strong></p>
-                <p class=pricing_plan>POUR <span class=price>5,99€</span> au lieu de<span class=price>(7,99€)</span> PAR MOIS avec le code avec le code NW5</p>
+                <p class=pricing_plan>POUR <span class=price>7,99€</span> PAR MOIS</p>
             </div><button type=button data=signup class=btn ng-click=open($event)>PROFITEZ D'UN MOIS GRATUIT</button></section>
         <header class="main-header navbar" ng-controller=LoginCtrl>
             <figure><a href=/><img src=/img/logo_nowave.svg alt="NoWave logo"></a>
@@ -66,7 +66,7 @@
                 <li ng-show=statistics>
                     <form action=%%action%%><input type=submit class=signup value=STATISTIQUES></form>
                 </li>
-                <li class=theme-select-item><select class=theme-select ng-model=selected_theme ng-change=go_to_theme()><option value="" disabled>NUMÉROS</option><option value=cinelatino>OTRA MIRADA</option><option value=extreme_cinema>Extrème cinéma</option><option value=Festival_Sequence_Court-metrage>Festival Séquence Court-métrage</option><option value=revolution>Révolution</option><option value=climat>Climat</option><option value=cat_iii>CAT-III</option><option value=love_hurts>Love Hurts</option><option value=freaks>Freaks</option><option value=shakespeare_lives>Shakespeare Lives</option><option value=pinku>Pinku Eiga</option><option value=zombos>Zombos</option><option value=festival_europeen_lille>FC EUROPÉEN DE LILLE</option><option value=festival_cine_latino>CineLatino</option><option value=mamoru>Mamoru Oshii</option><option value=valhalla>Valhalla</option><option value=bela_lugosi>Bela Lugosi</option><option value=misfits>Misfits</option><option value=mauvais_genre>Mauvais genre</option><option value=annecy>Festival du film d'animation d'Annecy</option><option value=nanar_1>Nanar 1</option><option value=12_sports>sports</option></select></li>
+                <li class=theme-select-item><select class=theme-select ng-model=selected_theme ng-change=go_to_theme()><option value="" disabled>NUMÉROS</option><option value=extreme_cinema>Extrème cinéma</option><option value=Festival_Sequence_Court-metrage>Festival Séquence Court-métrage</option><option value=revolution>Révolution</option><option value=climat>Climat</option><option value=cat_iii>CAT-III</option><option value=love_hurts>Love Hurts</option><option value=freaks>Freaks</option><option value=shakespeare_lives>Shakespeare Lives</option><option value=pinku>Pinku Eiga</option><option value=zombos>Zombos</option><option value=festival_europeen_lille>FC EUROPÉEN DE LILLE</option><option value=festival_cine_latino>CineLatino</option><option value=mamoru>Mamoru Oshii</option><option value=valhalla>Valhalla</option><option value=bela_lugosi>Bela Lugosi</option><option value=misfits>Misfits</option><option value=mauvais_genre>Mauvais genre</option><option value=annecy>Festival du film d'animation d'Annecy</option><option value=nanar_1>Nanar 1</option><option value=12_sports>sports</option></select></li>
                 <li ng-show=!isLogged><a data=login ng-click=open($event)>se connecter</a></li>
                 <li ng-show=isLogged><a ng-click=logout()>se déconnecter</a></li>
             </ul>
@@ -75,22 +75,40 @@
         <section id=active-theme>
             <style>
                 .movies {
-                    background-image: url(/img/themes/cinelatino/00_Image_thema_cinelatino.jpg);
+                    background-image: url(/img/themes/extreme_cinema/Image_thème_Extreme_cine-min.jpg);
                     background-repeat: no-repeat;
                     background-size: cover
                 }
             </style>
             <div class=movies>
                 <aside>
-                    <p><span class=issue>21</span></p>
-                    <p><span class=theme-name>OTRA MIRADA</span></p>
+                    <p><span class=issue>20</span></p>
+                    <p><span class=theme-name>Extrème cinema</span></p>
                 </aside>
                 <p class=intro></p>
                 <div class=movies-selection>
-                    <a href=/movies/el_futuro_perfecto class=card-movie style=background-image:url(img/movies/el_futuro_perfecto/01_vignette_film_El_Futuro_Perfecto.jpg);background-size:cover;background-repeat:no-repeat>
+                    <a href=/movies/bebe_vampire class=card-movie style=background-image:url(img/movies/bebe_vampire/vignettes_films_bebe_vampire-min.jpg);background-size:cover;background-repeat:no-repeat>
                         <div class=overlay>
-                            <div class=card-title>El Futuro Perfecto</div>
-                            <div class=card-content><span>Nele Wohlatz <br>Drame <br>2016, 1h 5min</span></div>
+                            <div class=card-title>Bébé vampire</div>
+                            <div class=card-content><span>John Hayes <br>film d'horreur <br>1970, 1h 35min</span></div>
+                        </div>
+                    </a>
+                    <a href=/movies/Les_Amants_D_Outre_Tombe class=card-movie style=background-image:url(img/movies/Les_Amants_D_Outre_Tombe/vignettes_film_les_amants_doutre_tombe-min.jpg);background-size:cover;background-repeat:no-repeat>
+                        <div class=overlay>
+                            <div class=card-title>Les Amants d’Outre-Tombe</div>
+                            <div class=card-content><span> Mario Caiano <br>film d'horreur <br>1965, 1h 45min</span></div>
+                        </div>
+                    </a>
+                    <a href=/movies/Fleur_Empoisonnee class=card-movie style=background-image:url(img/movies/Fleur_Empoisonnee/vignettes_film_fleur_empoisonnee-min.jpg);background-size:cover;background-repeat:no-repeat>
+                        <div class=overlay>
+                            <div class=card-title>Fleur Empoisonée,</div>
+                            <div class=card-content><span>Katsuhiko Fujii<br>Pinku<br>1980, 1h 10mn </span></div>
+                        </div>
+                    </a>
+                    <a href=/movies/Graine_de_Prostituee class=card-movie style=background-image:url(img/movies/Graine_de_Prostituee/vignettes_film_graine_de_prostituee-min.jpg);background-size:cover;background-repeat:no-repeat>
+                        <div class=overlay>
+                            <div class=card-title>Graine de Prostituée</div>
+                            <div class=card-content><span>Chusei Sone<br>Pinku<br>1973, 1h 12mn</span></div>
                         </div>
                     </a>
                 </div>
@@ -99,26 +117,20 @@
                 <figure><img src=img/themes/mamoru/portrait.jpg>
                     <figcaption>Visions curated by Nowave</figcaption>
                 </figure><img class=eye src=/img/eye.svg>
-                <article>Cinélatino fête ses 30 ans! A cette occasion et en partenariat avec le festival, Nowave présente la sélection OTRA MIRADA qui met à l’honneur le cinéma argentin, avec “El Futuro Perfecto” de Nele Wohlatz. Sélectionné en compétition au
-                    Festival de Locarno en 2016, ce film découverte retrace l'intégration d'une jeune immigrée chinoise en Argentine. La sélection s’enrichira tout au long du mois de mars, bon visionnage!
+                <article>A l'occasion de la 19ème édition du festival Extrême Cinéma, Nowave présente, en partenariat avec la Cinémathèque de Toulouse, une sélection de films 4 films extrêmes, à découvrir en exclusivité en ligne sur nowave.io. Cette année, l'invitée
+                    d'honneur du festival est Brigitte Lahaie.
 
                 </article><button type=button data=signup class=btn ng-click=open($event)>PROFITEZ D'UN MOIS GRATUIT</button></div>
         </section>
         <section class=themes-list>
             <p class=title-list>NUMÉROS PRÉCÉDENTS</p>
-            <a href=themes/extreme_cinema/ class=card-theme style="background-image:url(img/themes/extreme_cinema/Image_home_Extreme_cine-min.jpg);background-size:cover;background-repeat:no-repeat;background-position:0 30%">
-                <div class=content><span class=issue>20</span>
-                    <p class=theme-name>Extrème cinéma</p>
-                    <p class=theme-author><strong>Visions curated by </strong>- Nowave</p>
-                </div>
-            </a>
             <a href=themes/Festival_Sequence_Court-metrage/ class=card-theme style="background-image:url(img/themes/Festival_Sequence_Court-metrage/bandeau_thema.jpg);background-size:cover;background-repeat:no-repeat;background-position:0 30%">
                 <div class=content><span class=issue>19</span>
                     <p class=theme-name>FESTIVAL SÉQUENCE COURT-MÉTRAGE</p>
                     <p class=theme-author><strong>Visions curated by </strong>- Nowave</p>
                 </div>
             </a>
-            <a href=/themes/12_sports class=card-theme style="background-image:url(img/themes/12sports/home_bandeau.png);background-size:cover;background-repeat:no-repeat;background-position:0 30%">
+            <a href=/themes/12_sports class=card-theme style="background-image:url(img/themes/12_sports/bg_top.jpg);background-size:cover;background-repeat:no-repeat;background-position:0 30%">
                 <div class=content><span class=issue>18</span>
                     <p class=theme-name>SPORTS</p>
                     <p class=theme-author><strong>Visions curated by </strong>- Nowave</p>
